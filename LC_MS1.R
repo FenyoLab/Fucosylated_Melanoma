@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
 ##Author: Samson Jacob
-##Purpose: Read in the PSM matrix file and analyze samples; written in a verbose way to be very clear!
+##Purpose : Read in the PSM matrix file and analyze samples; written in a verbose way to be very clear!
 
 ##requires FORMATED_PSM.txt to be in the same subfolder! ##the output of the python script
 PSM_mat = read.table('./FORMATED_PSM.txt',sep='\t',header=TRUE,row.names = 1)
