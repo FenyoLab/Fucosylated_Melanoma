@@ -122,7 +122,7 @@ ggplot(g2,aes(Var1,Freq))+geom_bar(stat='identity',fill = "black", colour = "yel
 v = table(COMPL$PSM_Mewo1)
 names(v)= paste('PSM',names(v),sep='_')
 grid.text(names(v),x=unit(names(v),'native'),y=unit(-1,'lines'),just='right',rot=50)
-midpts3 <- barplot(v, col='blue', names.arg="")
+midpts3 = barplot(v, col='blue', names.arg="")
 text(x=midpts3, y=-2, names(v), cex=0.8, srt=45, xpd=TRUE)
 grid.text(names(v),
           x = unit(midpts2, "native"), y=unit(-1, "lines"),
@@ -153,5 +153,5 @@ nrow(subset(COMPL,COMPL$Robust4L!=0)) #83
 nrow(subset(COMPL,COMPL$RobustSKMEL!=0)) #65
 nrow(subset(COMPL,COMPL$RobustMEWO!=0)) #51
 
-##check the sum
+##check the total number
 COMPL$SumTau = apply(COMPL[,11:13],1,function(x){sum(x)})
